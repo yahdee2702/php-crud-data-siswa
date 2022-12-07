@@ -116,6 +116,11 @@ if (isset($_POST['simpan'])) {
             width: 800px;
         }
 
+        .row {
+            flex-wrap: nowrap;
+            flex-direction: row;
+        }
+
         .card {
             margin-top: 20px;
         }
@@ -249,13 +254,13 @@ if (isset($_POST['simpan'])) {
                             <td scope="row">
                                 <?php echo $kelas ?>
                             </td>
-                            <td scope="row">
-                                <a href="index.php?op=edit&id=<?php echo $id; ?>">
-                                    <button type="button" class="btn btn-warning">Edit</button>
+                            <td scope="row" class="row">
+                                <a href="index.php?op=edit&id=<?php echo $id; ?>" class="col">
+                                    <button type="button" class="btn btn-warning container-fluid">Edit</button>
                                 </a>
-                                <a href="index.php?op=delete&id=<?php echo $id; ?>"
-                                    onclick="return confirm('Yakin mau mengahapus')"><button type="button"
-                                        class="btn btn-danger">Delete</button></a>
+                                <a href="index.php?op=delete&id=<?php echo $id; ?>" class="col"
+                                    onclick="return confirm('Yakin mau menghapus')" class=""><button type="button"
+                                        class="btn btn-danger container-fluid">Delete</button></a>
                             </td>
                         </tr>
                         <?php } ?>
